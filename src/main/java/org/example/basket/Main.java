@@ -1,16 +1,12 @@
-package basket;
+package org.example.basket;
 
-import basket.exceptions.BasketEmptyException;
-import basket.exceptions.BasketFullException;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.example.basket.exceptions.BasketEmptyException;
+import org.example.basket.exceptions.BasketFullException;
 
 public class Main {
     public static void main(String[] args) {
 
         Basket<String> myBasket = new BasketList<>();
-        List<String> list = new ArrayList<>();
 
         myBasket.add("Apple");
         myBasket.add("Banana");

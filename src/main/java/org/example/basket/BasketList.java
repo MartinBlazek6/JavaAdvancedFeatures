@@ -1,7 +1,7 @@
-package basket;
+package org.example.basket;
 
-import basket.exceptions.BasketEmptyException;
-import basket.exceptions.BasketFullException;
+import org.example.basket.exceptions.BasketEmptyException;
+import org.example.basket.exceptions.BasketFullException;
 
 import java.util.ArrayList;
 import java.util.Collection;
