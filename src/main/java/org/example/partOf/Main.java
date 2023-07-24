@@ -7,7 +7,6 @@ import static org.example.partOf.ArrayPartOf.partOf;
 
 public class Main {
     public static void main(String[] args) {
-        // Example usage:
         List<Optional<String>> stringList = List.of(
                 Optional.of("apple"),
                 Optional.of("banana"),
