@@ -1,9 +1,13 @@
 package geometrics;
 
+import moves.Movable;
+import moves.MoveDirection;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-public class Circle {
+public class Circle implements Movable,Resizable {
     private Point2D center;
     private Point2D point;
 
@@ -39,5 +43,35 @@ public class Circle {
         }
 
         return slicePoints;
+    }
+
+    @Override
+    public void move(MoveDirection moveDirection) {
+        this.center.move(moveDirection);
+        this.point.move(moveDirection);
+
+        System.out.println("New Radius: " + getRadius());
+        System.out.println("New Perimeter: " + getPerimeter());
+        System.out.println("New Area: " + getArea());
+        List<Point2D> slicePoints = getSlicePoints();
+        System.out.println("New Slice points:");
+        slicePoints.forEach(point ->  System.out.println("x: " + point.getX() + ", y: " + point.getY()));
+    }
+
+    @Override
+    public void resize(double resizeFactor) {
+        double newRadius = getRadius() * resizeFactor;
+
+        double deltaX = point.getX() - center.getX();
+        double deltaY = point.getY() - center.getY();
+        double length = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        double newX = center.getX() + (deltaX / length) * newRadius;
+        double newY = center.getY() + (deltaY / length) * newRadius;
+
+        point.setX(newX);
+        point.setY(newY);
+
+        List<Point2D> slicePoints = getSlicePoints();
+        slicePoints.forEach(point -> System.out.println("x: " + point.getX() + ", y: " + point.getY()));
     }
 }
