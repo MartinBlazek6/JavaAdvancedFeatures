@@ -1,14 +1,13 @@
 package validator;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.stream.Stream;
 
 @Data
-@AllArgsConstructor
-@Builder
 public class Parcel implements Validator {
 
     private int xLength;
@@ -16,16 +15,14 @@ public class Parcel implements Validator {
     private int zLength;
     private float weight;
     private boolean isExpress;
-    private boolean isValid;
-
+    private Boolean isValid;
 
     @Override
     public boolean validate(Parcel input) {
-        this.isValid = Stream.of(
+       return Stream.of(
                 validateDimensions(),
                 validateWeight()
         ).allMatch(result -> result);
-        return isValid;
     }
 
     private boolean validateDimensions() {
@@ -38,4 +35,11 @@ public class Parcel implements Validator {
         return weight <= maxWeight;
     }
 
+    public Parcel(int xLength, int yLength, int zLength, float weight, boolean isExpress) {
+        this.xLength = xLength;
+        this.yLength = yLength;
+        this.zLength = zLength;
+        this.weight = weight;
+        this.isExpress = isExpress;
+    }
 }
