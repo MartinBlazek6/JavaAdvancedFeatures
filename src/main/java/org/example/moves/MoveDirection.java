@@ -1,4 +1,4 @@
-package moves;
+package org.example.moves;
 
 import lombok.Data;
 

@@ -1,11 +1,11 @@
-package geometrics;
+package org.example.geometrics;
 
-import moves.Movable;
-import moves.MoveDirection;
+
+import org.example.moves.Movable;
+import org.example.moves.MoveDirection;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class Circle implements Movable,Resizable {
     private Point2D center;
@@ -74,4 +74,5 @@ public class Circle implements Movable,Resizable {
         List<Point2D> slicePoints = getSlicePoints();
         slicePoints.forEach(point -> System.out.println("x: " + point.getX() + ", y: " + point.getY()));
     }
+
 }

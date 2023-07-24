@@ -1,4 +1,4 @@
-package geometrics;
+package org.example.geometrics;
 
 public class Main {
     public static void main(String[] args) {

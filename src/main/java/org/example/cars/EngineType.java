@@ -1,4 +1,4 @@
-package cars;
+package org.example.cars;
 
 public enum EngineType {
     V12,

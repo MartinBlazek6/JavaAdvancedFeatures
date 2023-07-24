@@ -1,9 +1,6 @@
-package validator;
+package org.example.validator;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import java.util.stream.Stream;
 
@@ -19,10 +16,12 @@ public class Parcel implements Validator {
 
     @Override
     public boolean validate(Parcel input) {
-       return Stream.of(
+        this.isValid =
+        Stream.of(
                 validateDimensions(),
                 validateWeight()
         ).allMatch(result -> result);
+        return isValid;
     }
 
     private boolean validateDimensions() {

@@ -1,4 +1,4 @@
-package map;
+package org.example.map;
 
 import java.util.List;
 

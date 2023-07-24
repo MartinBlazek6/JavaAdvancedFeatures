@@ -1,6 +1,4 @@
-package validator;
-
-import java.util.List;
+package org.example.validator;
 
 public class Main {
     public static void main(String[] args) {

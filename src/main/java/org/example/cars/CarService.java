@@ -1,4 +1,4 @@
-package cars;
+package org.example.cars;
 
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,4 +1,4 @@
-package cars;
+package org.example.cars;
 
 import java.util.Date;
 import java.util.Locale;
