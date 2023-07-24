@@ -1,39 +1,46 @@
 package org.example.cars;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
 import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
+@AllArgsConstructor
+@Builder
+@Data
 public class Manufacturer {
 
    private String name;
     private Date yeaOfEstablishment;
-    private Locale.IsoCountryCode country;
+    private String country;
 
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public Date getYeaOfEstablishment() {
+//        return yeaOfEstablishment;
+//    }
+//
+//    public void setYeaOfEstablishment(Date yeaOfEstablishment) {
+//        this.yeaOfEstablishment = yeaOfEstablishment;
+//    }
+//
+//    public String getCountry() {
+//        return country;
+//    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Date getYeaOfEstablishment() {
-        return yeaOfEstablishment;
-    }
-
-    public void setYeaOfEstablishment(Date yeaOfEstablishment) {
-        this.yeaOfEstablishment = yeaOfEstablishment;
-    }
-
-    public Locale.IsoCountryCode getCountry() {
-        return country;
-    }
-
-    public void setCountry(Locale.IsoCountryCode country) {
-        this.country = country;
-    }
+//    public void setCountry(Locale.IsoCountryCode country) {
+//        this.country = country;
+//    }
 
     @Override
     public boolean equals(Object o) {
