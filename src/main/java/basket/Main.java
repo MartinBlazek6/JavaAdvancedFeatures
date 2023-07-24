@@ -9,7 +9,8 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        Basket<String> myBasket = new MyBasket<>();
+        Basket<String> myBasket = new BasketList<>();
+        List<String> list = new ArrayList<>();
 
         myBasket.add("Apple");
         myBasket.add("Banana");

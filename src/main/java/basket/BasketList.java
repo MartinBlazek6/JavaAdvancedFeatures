@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
-public class MyBasket<E>  implements Basket<E> {
+public class BasketList<E>  implements Basket<E> {
     private static final int MAX_CAPACITY = 10;
     private ArrayList<E> items = new ArrayList<>();
 
