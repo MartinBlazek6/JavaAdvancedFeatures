@@ -17,31 +17,6 @@ public class Manufacturer {
     private Date yeaOfEstablishment;
     private String country;
 
-
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public Date getYeaOfEstablishment() {
-//        return yeaOfEstablishment;
-//    }
-//
-//    public void setYeaOfEstablishment(Date yeaOfEstablishment) {
-//        this.yeaOfEstablishment = yeaOfEstablishment;
-//    }
-//
-//    public String getCountry() {
-//        return country;
-//    }
-
-//    public void setCountry(Locale.IsoCountryCode country) {
-//        this.country = country;
-//    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
