@@ -14,7 +14,7 @@ public class Main {
         ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(3);
 
         // Schedule the creation and execution of coffee brewing services with a 3-second delay
-        for (int i = 1; i <= 3; i++) {
+        for (int i = 0; i <= 2; i++) {
             final int index = i; // Create a final variable to use inside the lambda expression
             scheduler.schedule(() -> {
                 String serviceName = "Service-" + index;
