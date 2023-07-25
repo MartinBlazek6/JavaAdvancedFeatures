@@ -1,6 +1,7 @@
 package org.example.partOf;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -23,4 +24,17 @@ public class ArrayPartOf {
 
         return ((double) occurrences / totalItems) * 100.0;
     }
+
+    public static <T> String partOf(List<T> list, T element) {
+        if (list.isEmpty()){
+            throw new RuntimeException("List cannot be empty");
+        } else if (list.contains(null)) {
+            throw new RuntimeException("List cannot contain null value");
+        }
+
+        return element + " is occurred with: "
+                + ((double) (int) list.stream().filter(item -> item.equals(element)).count() / list.size() * 100) + "%";
+    }
+
 }
+
