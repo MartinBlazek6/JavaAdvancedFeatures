@@ -14,4 +14,5 @@ public class ThreadPlaygroundRunnable implements Runnable{
         Thread.currentThread().setName(this.name);
         IntStream.range(0,10).forEach(i-> System.out.println(this.name));
     }
+
 }
