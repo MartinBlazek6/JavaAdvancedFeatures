@@ -12,9 +12,9 @@ public class DisplayPhotos extends JFrame {
 
     private static final int FRAME_WIDTH = 800;
     private static final int FRAME_HEIGHT = 600;
-    private static final int DELAY_MS = 5000; // 5 seconds
+    private static final int DELAY_MS = 5000;
 
-    private ArrayList<File> photoFiles;
+    private final ArrayList<File> photoFiles;
     private int currentPhotoIndex = 0;
 
     public DisplayPhotos() {
@@ -51,10 +51,8 @@ public class DisplayPhotos extends JFrame {
 
         for (File file : files) {
             if (file.isDirectory()) {
-                // Recursively explore subdirectories
                 exploreDirectory(file);
             } else {
-                // Check if the file is an image (.png or .jpg)
                 String fileName = file.getName().toLowerCase();
                 if (fileName.endsWith(".png") || fileName.endsWith(".jpg")) {
                     photoFiles.add(file);
